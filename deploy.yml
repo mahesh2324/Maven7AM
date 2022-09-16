@@ -10,6 +10,7 @@
         state: absent
       with_items:
         - student
+        - teacher
         - student.war
     - name: Download war file
       get_url:
