@@ -6,10 +6,11 @@
   tasks:
     - name: Remove the older war files from webapps folder
       file:
-        name: "/opt/apache-tomcat-9.0.1/webapps/{{item}}"
+        name: "/opt/apache-tomcat-9.0.65/webapps/{{item}}"
         state: absent
       with_items:
         - student
+        - parent
         - teacher
         - student.war
     - name: Download war file
